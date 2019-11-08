@@ -44,3 +44,39 @@ button {
 #helloUser {
   margin-right: 15px;
 }
+
+#productCard {
+  margin: 2px;
+  border-radius: 0px;
+  border-color: white;
+}
+
+.card-img-top {
+  border-radius: 0px;
+  
+}
+
+#productName {
+  font-weight: bold;
+  justify-content: center;
+}
+/* #productPrice {
+  font-size: 50px;
+} */
+
+#prodBody {
+  padding-bottom: 15px;
+  border: 1px solid #bebcbc9e;
+  border-radius: 0px;
+  justify-content: center;
+}
+
+.card-title {
+  padding: 2px;
+  margin: 10px;
+}
+
+#plusBtn {
+  text-align: center;
+}
+

@@ -43,7 +43,7 @@ Product.init(
     },
     rating: {
       type: S.INTEGER,
-      defaultValue: 0 //needs to be changed for a getter or setter.
+      defaultValue: 10 //needs to be changed for a getter or setter.
     },
     active: {
       type: S.BOOLEAN,
