@@ -1,7 +1,8 @@
-import { GET_PRODUCTS, SEARCH_PRODUCTS } from "../constants/index";
+import { GET_PRODUCTS, SEARCH_PRODUCTS, SELECTED_PRODUCT } from "../constants/index";
 
 const initialState = {
-  products: []
+  products: [],
+  selectedProduct: {}
 };
 
 export default (state = initialState, action) => {
@@ -11,6 +12,8 @@ export default (state = initialState, action) => {
 
     case SEARCH_PRODUCTS:
       return { ...state, products: action.products };
+    case SELECTED_PRODUCT:
+      return {...state, selectedProduct: action.product}
     default:
       return state;
   }

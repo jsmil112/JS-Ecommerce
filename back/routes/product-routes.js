@@ -46,8 +46,11 @@ router.get("/random/:number", function(req, res) {
 });
 
 //get single product
-router.get("/:productId", function(req, res) {
-  Product.findByPk(req.params.productId).then(product => res.send(product));
+
+router.get("/:productId", function(req, res, next) {
+  Product.findByPk(req.params.productId).then(product => {
+    res.send(product);
+  });
 });
 
 //create new product

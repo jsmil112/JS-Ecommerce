@@ -30,6 +30,7 @@ export class HomeContainers extends Component {
   handleAdd() {}
 
   render() {
+    console.log(this.props)
     return (
       <div>
         <Search

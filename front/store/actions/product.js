@@ -1,4 +1,4 @@
-import { GET_PRODUCTS, SEARCH_PRODUCTS } from "../constants/index";
+import { GET_PRODUCTS, SEARCH_PRODUCTS, SELECTED_PRODUCT } from "../constants/index";
 import axios from "axios";
 
 export const getProducts = products => ({
@@ -11,7 +11,19 @@ export const getSearchProducts = products => ({
   products
 });
 
+export const selectedProduct = product => ({
+  type: SELECTED_PRODUCT,
+  product
+})
+
 //Para esta funcion necesito en el back una ruta a /products con un FindAll() que me traiga todos los productos que estan en la db (por ahora serian solo 9 que estan cargados)
+
+export const fetchProduct = (id) => dispatch => {
+  axios.get(`/api/product/${id}`)
+  .then(res => res.data)
+  .then(product => dispatch(selectedProduct(product)))
+}
+
 
 export const fetchProducts = () => dispatch => {
   axios
