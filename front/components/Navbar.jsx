@@ -1,7 +1,8 @@
-import React from "react";
-import { AiOutlineShoppingCart } from "react-icons/ai";
+import React from 'react';
+import { AiOutlineShoppingCart, AiOutlineGoogle } from 'react-icons/ai';
 
 export default function Navbar(props) {
+  console.log(props);
   return (
     <nav className="navbar navbar-expand-md navbar-dark bg-light">
       <div className="container-fluid">
@@ -122,6 +123,9 @@ export default function Navbar(props) {
                   <div className="modal-header">
                     <h2 className="modal-title" id="exampleModalLabel">
                       Login
+                      <button onClick={props.handleGoogle}>
+                        <AiOutlineGoogle />
+                      </button>
                     </h2>
                     <button
                       type="button"
@@ -172,7 +176,7 @@ export default function Navbar(props) {
           {Object.keys(props.user).length ? (
             <span id="helloUser">Hello {props.user.name}</span>
           ) : (
-            ""
+            ''
           )}
 
           <button id="cartButton">

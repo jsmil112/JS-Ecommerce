@@ -225,6 +225,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 function Navbar(props) {
   var _React$createElement;
 
+  console.log(props);
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
     className: "navbar navbar-expand-md navbar-dark bg-light"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -320,7 +321,9 @@ function Navbar(props) {
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
     className: "modal-title",
     id: "exampleModalLabel"
-  }, "Login"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+  }, "Login", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    onClick: props.handleGoogle
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_icons_ai__WEBPACK_IMPORTED_MODULE_1__["AiOutlineGoogle"], null))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     type: "button",
     className: "close",
     id: "loginClose",
@@ -355,7 +358,7 @@ function Navbar(props) {
     className: "btn btn-dark"
   }, "Login")))))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, Object.keys(props.user).length ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     id: "helloUser"
-  }, "Hello ", props.user.name) : "", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+  }, "Hello ", props.user.name) : '', react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     id: "cartButton"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_icons_ai__WEBPACK_IMPORTED_MODULE_1__["AiOutlineShoppingCart"], null)))));
 }
@@ -580,8 +583,6 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
-
-
 var NavbarContainer =
 /*#__PURE__*/
 function (_Component) {
@@ -594,11 +595,12 @@ function (_Component) {
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(NavbarContainer).call(this, props));
     _this.state = {
-      email: "",
-      password: "",
-      name: ""
+      email: '',
+      password: '',
+      name: ''
     };
     _this.handleLogIn = _this.handleLogIn.bind(_assertThisInitialized(_this));
+    _this.googleLogIn = _this.handleGoogle.bind(_assertThisInitialized(_this));
     _this.handleLogOut = _this.handleLogOut.bind(_assertThisInitialized(_this));
     _this.handleSubmitRegister = _this.handleSubmitRegister.bind(_assertThisInitialized(_this));
     _this.handlePasswordInput = _this.handlePasswordInput.bind(_assertThisInitialized(_this));
@@ -612,8 +614,8 @@ function (_Component) {
     value: function handleSubmitRegister(event) {
       event.preventDefault();
       this.props.userRegUser(this.state.name, this.state.email, this.state.password);
-      document.querySelector("#registerForm").reset();
-      document.querySelector("#registerClose").click(); // .then(() => this.props.history.push("/"));
+      document.querySelector('#registerForm').reset();
+      document.querySelector('#registerClose').click(); // .then(() => this.props.history.push("/"));
     }
   }, {
     key: "handleLogOut",
@@ -625,8 +627,14 @@ function (_Component) {
     key: "handleLogIn",
     value: function handleLogIn(event) {
       event.preventDefault();
-      document.querySelector("#loginClose").click();
+      document.querySelector('#loginClose').click();
       this.props.userLogIn(this.state.email, this.state.password); // .then(() => this.props.history.push("/"));
+    }
+  }, {
+    key: "handleGoogle",
+    value: function handleGoogle(event) {
+      event.preventDefault();
+      Object(_store_actions_user__WEBPACK_IMPORTED_MODULE_3__["googleLogIn"])();
     }
   }, {
     key: "handleEmailInput",
@@ -655,6 +663,7 @@ function (_Component) {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Navbar__WEBPACK_IMPORTED_MODULE_1__["default"], {
         user: this.props.user,
         handleLogIn: this.handleLogIn,
+        handleGoogle: this.handleGoogle,
         handleNameInput: this.handleNameInput,
         handleEmailInput: this.handleEmailInput,
         handlePasswordInput: this.handlePasswordInput,
@@ -54199,7 +54208,7 @@ function warning(message) {
 /*!***************************************************************!*\
   !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
   \***************************************************************/
-/*! exports provided: BrowserRouter, HashRouter, Link, NavLink, MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, __RouterContext, generatePath, matchPath, useHistory, useLocation, useParams, useRouteMatch, withRouter */
+/*! exports provided: MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, __RouterContext, generatePath, matchPath, useHistory, useLocation, useParams, useRouteMatch, withRouter, BrowserRouter, HashRouter, Link, NavLink */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -61933,7 +61942,7 @@ var searchProducts = function searchProducts(search) {
 /*!*******************************!*\
   !*** ./store/actions/user.js ***!
   \*******************************/
-/*! exports provided: logUser, regUser, logOut, userLogOut, userRegUser, userLogIn, fetchUser */
+/*! exports provided: logUser, regUser, logOut, userLogOut, userRegUser, googleLogIn, userLogIn, fetchUser */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -61943,6 +61952,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "logOut", function() { return logOut; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "userLogOut", function() { return userLogOut; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "userRegUser", function() { return userRegUser; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "googleLogIn", function() { return googleLogIn; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "userLogIn", function() { return userLogIn; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchUser", function() { return fetchUser; });
 /* harmony import */ var _constants_index__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../constants/index */ "./store/constants/index.js");
@@ -61969,7 +61979,7 @@ var logOut = function logOut(user) {
 };
 var userLogOut = function userLogOut() {
   return function (dispatch) {
-    return axios__WEBPACK_IMPORTED_MODULE_1___default.a.get("/api/user/logout").then(function () {
+    return axios__WEBPACK_IMPORTED_MODULE_1___default.a.get('/api/user/logout').then(function () {
       return dispatch(logOut());
     })["catch"](function (err) {
       return console.log(err);
@@ -61979,7 +61989,7 @@ var userLogOut = function userLogOut() {
 
 var userRegUser = function userRegUser(name, email, password) {
   return function (dispatch) {
-    return axios__WEBPACK_IMPORTED_MODULE_1___default.a.post("/api/user/register", {
+    return axios__WEBPACK_IMPORTED_MODULE_1___default.a.post('/api/user/register', {
       name: name,
       email: email,
       password: password
@@ -61993,9 +62003,18 @@ var userRegUser = function userRegUser(name, email, password) {
   };
 }; // Para esta funcion necesito una ruta en el back a /login que haga un findByPk para buscar un usuario particular y loguearlo
 
+var googleLogIn = function googleLogIn() {
+  return function (dispatch) {
+    return axios__WEBPACK_IMPORTED_MODULE_1___default.a.get('/api/user/login/google').then(function (res) {
+      return console.log('aaaa');
+    });
+  };
+}; // .then(user => dispatch(logUser(user)))
+//  .catch(err => console.log(err));
+
 var userLogIn = function userLogIn(email, password) {
   return function (dispatch) {
-    return axios__WEBPACK_IMPORTED_MODULE_1___default.a.post("/api/user/login", {
+    return axios__WEBPACK_IMPORTED_MODULE_1___default.a.post('/api/user/login', {
       email: email,
       password: password
     }).then(function (res) {
@@ -62009,7 +62028,7 @@ var userLogIn = function userLogIn(email, password) {
 };
 var fetchUser = function fetchUser() {
   return function (dispatch) {
-    axios__WEBPACK_IMPORTED_MODULE_1___default.a.get("/api/user/me").then(function (res) {
+    axios__WEBPACK_IMPORTED_MODULE_1___default.a.get('/api/user/me').then(function (res) {
       return res.data;
     }).then(function (user) {
       return dispatch(logUser(user));
