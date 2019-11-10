@@ -123,9 +123,11 @@ export default function Navbar(props) {
                   <div className="modal-header">
                     <h2 className="modal-title" id="exampleModalLabel">
                       Login
-                      <button onClick={props.handleGoogle}>
-                        <AiOutlineGoogle />
-                      </button>
+                      <label>
+                        <a onClick={props.handleGoogle}>
+                          <AiOutlineGoogle />
+                        </a>
+                      </label>
                     </h2>
                     <button
                       type="button"

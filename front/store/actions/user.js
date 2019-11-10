@@ -33,7 +33,7 @@ export const userRegUser = (name, email, password) => dispatch =>
 // Para esta funcion necesito una ruta en el back a /login que haga un findByPk para buscar un usuario particular y loguearlo
 
 export const googleLogIn = () => dispatch =>
-  axios.get('/api/user/login/google').then(res => console.log('aaaa'));
+  axios.post('/api/user/login/google').then(res => console.log(res));
 
 // .then(user => dispatch(logUser(user)))
 //  .catch(err => console.log(err));

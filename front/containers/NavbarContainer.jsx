@@ -17,7 +17,7 @@ class NavbarContainer extends Component {
       name: ''
     };
     this.handleLogIn = this.handleLogIn.bind(this);
-    this.googleLogIn = this.handleGoogle.bind(this);
+    this.handleGoogle = this.handleGoogle.bind(this);
     this.handleLogOut = this.handleLogOut.bind(this);
     this.handleSubmitRegister = this.handleSubmitRegister.bind(this);
     this.handlePasswordInput = this.handlePasswordInput.bind(this);

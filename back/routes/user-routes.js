@@ -16,11 +16,15 @@ router.get(
   }
 );
 
-router.get(
+router.post(
   '/login/google',
-  passport.authenticate('google', {
-    scope: ['profile']
-  })
+  passport.authenticate(
+    'google',
+    {
+      scope: ['profile']
+    },
+    () => console.log('THIS!', this)
+  )
 );
 
 //login

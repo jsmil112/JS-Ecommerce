@@ -29,16 +29,19 @@ passport.use(
   new GoogleStrategy(
     {
       clientID:
-        '196300300927-u36d8035p63g1v3at475e4h651u6qqs9.apps.googleusercontent.com',
-
-      clientSecret: 'rPPSx9mheBap8Tclv3toulpr',
+        '196300300927-l1podpfbip1sogdv5fqgacgplm2nmdla.apps.googleusercontent.com',
+      clientSecret: 'YzmfjUHzybnT-hJVuIEuewrH',
       callbackURL: 'api/user/login/google/redirect',
       passReqToCallback: true
     },
     function(accessToken, refreshToken, profile, done) {
-      User.findOrCreate({ googleId: profile.id }, function(err, user) {
-        return done(err, user);
-      });
+      console.log(accessToken, refreshToken, profile, done);
+      /*
+      User.findOrCreate({
+        where: { username: 'g' + profile.id, name: profile.displayName }
+      })
+        .then(user => done(null, user))
+        .catch(err => done(err)); */
     }
   )
 );
