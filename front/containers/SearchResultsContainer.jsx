@@ -9,10 +9,15 @@ export class SearchResultsContainer extends Component {
     props.searchProducts(props.searchQuery);
   }
 
-  render(){
-    return(<div>
-      <SearchResults products={this.props.products}/>
-    </div>)
+  render() {
+    return (
+      <div>
+        <SearchResults
+          input={this.props.searchQuery}
+          products={this.props.products}
+        />
+      </div>
+    );
   }
 }
 

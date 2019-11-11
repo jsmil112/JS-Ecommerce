@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import StarRatings from "react-star-ratings";
 import { CardDeck, Card } from "react-bootstrap";
-import { Link } from "react-router-dom";
 import { TiPlus } from "react-icons/ti";
 
 export default function RandomView({ products }) {

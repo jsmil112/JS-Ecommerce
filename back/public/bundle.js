@@ -310,7 +310,13 @@ function Navbar(props) {
   }, Object.keys(user).length ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", (_React$createElement = {
     className: "navbar-toggler",
     type: "button"
-  }, _defineProperty(_React$createElement, "className", "btn btn-light"), _defineProperty(_React$createElement, "onClick", handleLogOut), _React$createElement), "LOG OUT")) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+  }, _defineProperty(_React$createElement, "className", "btn btn-light"), _defineProperty(_React$createElement, "onClick", handleLogOut), _React$createElement), "LOG OUT"), location.pathname === "/" ? "" : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+    to: "/"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "brandLogoMiniDiv"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "brandLogoMini"
+  }, "JS"))))) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     type: "button",
     className: "btn btn-light",
     "data-toggle": "modal",
@@ -381,7 +387,7 @@ function Navbar(props) {
     className: "btn btn-light",
     "data-toggle": "modal",
     "data-target": "#login"
-  }, "LOGIN"), location.pathname === '/' ? '' : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+  }, "LOGIN"), location.pathname === "/" ? "" : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
     to: "/"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "brandLogoMiniDiv"
@@ -439,7 +445,7 @@ function Navbar(props) {
     className: "btn btn-dark"
   }, "Login")))))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, Object.keys(user).length ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     id: "helloUser"
-  }, "Hello ", user.name) : '', react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+  }, "Hello ", user.name) : "", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     id: "cartButton"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_icons_ai__WEBPACK_IMPORTED_MODULE_1__["AiOutlineShoppingCart"], null)))));
 }
@@ -451,9 +457,58 @@ function Navbar(props) {
   !*** ./components/RandomView.jsx ***!
   \***********************************/
 /*! exports provided: default */
-/***/ (function(module, exports) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: /home/user/Escritorio/JS-Ecommerce/front/components/RandomView.jsx: Identifier 'Link' has already been declared (5:9)\n\n\u001b[0m \u001b[90m 3 | \u001b[39m\u001b[36mimport\u001b[39m \u001b[33mStarRatings\u001b[39m from \u001b[32m\"react-star-ratings\"\u001b[39m\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 4 | \u001b[39m\u001b[36mimport\u001b[39m { \u001b[33mCardDeck\u001b[39m\u001b[33m,\u001b[39m \u001b[33mCard\u001b[39m } from \u001b[32m\"react-bootstrap\"\u001b[39m\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 5 | \u001b[39m\u001b[36mimport\u001b[39m { \u001b[33mLink\u001b[39m } from \u001b[32m\"react-router-dom\"\u001b[39m\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m   | \u001b[39m         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 6 | \u001b[39m\u001b[36mimport\u001b[39m { \u001b[33mTiPlus\u001b[39m } from \u001b[32m\"react-icons/ti\"\u001b[39m\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 7 | \u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 8 | \u001b[39m\u001b[36mexport\u001b[39m \u001b[36mdefault\u001b[39m \u001b[36mfunction\u001b[39m \u001b[33mRandomView\u001b[39m({ products }) {\u001b[0m\n    at Object.raise (/home/user/Escritorio/JS-Ecommerce/front/node_modules/@babel/parser/lib/index.js:6931:17)\n    at ScopeHandler.checkRedeclarationInScope (/home/user/Escritorio/JS-Ecommerce/front/node_modules/@babel/parser/lib/index.js:4241:12)\n    at ScopeHandler.declareName (/home/user/Escritorio/JS-Ecommerce/front/node_modules/@babel/parser/lib/index.js:4207:12)\n    at Object.checkLVal (/home/user/Escritorio/JS-Ecommerce/front/node_modules/@babel/parser/lib/index.js:8764:22)\n    at Object.parseImportSpecifier (/home/user/Escritorio/JS-Ecommerce/front/node_modules/@babel/parser/lib/index.js:12024:10)\n    at Object.parseNamedImportSpecifiers (/home/user/Escritorio/JS-Ecommerce/front/node_modules/@babel/parser/lib/index.js:12009:12)\n    at Object.parseImport (/home/user/Escritorio/JS-Ecommerce/front/node_modules/@babel/parser/lib/index.js:11948:39)\n    at Object.parseStatementContent (/home/user/Escritorio/JS-Ecommerce/front/node_modules/@babel/parser/lib/index.js:10710:27)\n    at Object.parseStatement (/home/user/Escritorio/JS-Ecommerce/front/node_modules/@babel/parser/lib/index.js:10612:17)\n    at Object.parseBlockOrModuleBlockBody (/home/user/Escritorio/JS-Ecommerce/front/node_modules/@babel/parser/lib/index.js:11188:25)\n    at Object.parseBlockBody (/home/user/Escritorio/JS-Ecommerce/front/node_modules/@babel/parser/lib/index.js:11175:10)\n    at Object.parseTopLevel (/home/user/Escritorio/JS-Ecommerce/front/node_modules/@babel/parser/lib/index.js:10543:10)\n    at Object.parse (/home/user/Escritorio/JS-Ecommerce/front/node_modules/@babel/parser/lib/index.js:12052:10)\n    at parse (/home/user/Escritorio/JS-Ecommerce/front/node_modules/@babel/parser/lib/index.js:12103:38)\n    at parser (/home/user/Escritorio/JS-Ecommerce/front/node_modules/@babel/core/lib/transformation/normalize-file.js:168:34)\n    at normalizeFile (/home/user/Escritorio/JS-Ecommerce/front/node_modules/@babel/core/lib/transformation/normalize-file.js:102:11)\n    at runSync (/home/user/Escritorio/JS-Ecommerce/front/node_modules/@babel/core/lib/transformation/index.js:44:43)\n    at runAsync (/home/user/Escritorio/JS-Ecommerce/front/node_modules/@babel/core/lib/transformation/index.js:35:14)\n    at /home/user/Escritorio/JS-Ecommerce/front/node_modules/@babel/core/lib/transform.js:34:34\n    at processTicksAndRejections (internal/process/task_queues.js:75:11)");
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return RandomView; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var react_star_ratings__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-star-ratings */ "./node_modules/react-star-ratings/build/index.js");
+/* harmony import */ var react_star_ratings__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_star_ratings__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/index.js");
+/* harmony import */ var react_icons_ti__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-icons/ti */ "./node_modules/react-icons/ti/index.esm.js");
+
+
+
+
+
+function RandomView(_ref) {
+  var products = _ref.products;
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    id: "randomViewContainer"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["CardDeck"], null, products.map(function (product) {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Card"], {
+      className: "card text-center",
+      id: "productCard",
+      key: product.id
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+      to: "/product/".concat(product.id)
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Card"].Img, {
+      variant: "top",
+      src: product.image
+    })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Card"].Body, {
+      id: "prodBody"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Card"].Title, {
+      id: "productName"
+    }, product.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Card"].Title, {
+      id: "productPrice"
+    }, product.price), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("small", {
+      className: "text-muted"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_star_ratings__WEBPACK_IMPORTED_MODULE_2___default.a, {
+      rating: product.rating,
+      starDimension: "11px",
+      starSpacing: "4px",
+      starRatedColor: "rgb(188, 100, 100)"
+    })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+      to: "/product/".concat(product.id)
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      id: "plusBtn",
+      className: "btn btn-light"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_icons_ti__WEBPACK_IMPORTED_MODULE_4__["TiPlus"], null), " info"))));
+  })));
+}
 
 /***/ }),
 
@@ -518,10 +573,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function SearchResults(_ref) {
-  var products = _ref.products;
+  var products = _ref.products,
+      input = _ref.input;
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "randomViewContainer"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["CardDeck"], null, products.map(function (product) {
+  }, products.length ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["CardDeck"], null, products.map(function (product) {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["Card"], {
       className: "card text-center",
       id: "productCard",
@@ -550,7 +606,7 @@ function SearchResults(_ref) {
       id: "plusBtn",
       className: "btn btn-light"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_icons_ti__WEBPACK_IMPORTED_MODULE_4__["TiPlus"], null), " info"))));
-  })));
+  })) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "UNFORTUNATELY WE DON'T GET RESULTS FOR YOUR SEARCH: ", input), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Please try again! Search tips: \"Check your spelling in case you had typing errors, for example Boats instead of Boots. Try searching for a similar term or synonym. Try again, looking for only one word. Try again, looking for more generic terms - you can filter the results later.")));
 }
 
 /***/ }),
@@ -914,6 +970,7 @@ function (_Component) {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_SearchResults__WEBPACK_IMPORTED_MODULE_2__["default"], {
+        input: this.props.searchQuery,
         products: this.props.products
       }));
     }

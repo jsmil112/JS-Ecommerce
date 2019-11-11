@@ -2,6 +2,9 @@ body {
   height: 100%;
   position: relative;
 }
+p {
+  text-align: center;
+}
 
 .brandLogo {
   font-family: "Cinzel", serif;
