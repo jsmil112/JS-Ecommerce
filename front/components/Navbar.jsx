@@ -1,6 +1,7 @@
 import React from "react";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { Link } from "react-router-dom";
+import SideDrawer from "../components/SideDrawerMaterial";
 
 export default function Navbar(props) {
   const {
@@ -115,9 +116,9 @@ export default function Navbar(props) {
             >
               LOGIN
             </button>
-            
-            { location.pathname === '/' ? (
-              ''
+
+            {location.pathname === "/" ? (
+              ""
             ) : (
               <Link to={`/`}>
                 <label>
@@ -127,6 +128,7 @@ export default function Navbar(props) {
                 </label>
               </Link>
             )}
+            {location.pathname === "/" ? "" : <SideDrawer />}
 
             <div
               className="modal fade"
@@ -191,7 +193,7 @@ export default function Navbar(props) {
           {Object.keys(user).length ? (
             <span id="helloUser">Hello {user.name}</span>
           ) : (
-            ''
+            ""
           )}
 
           {/* code for adding searchbar to navbar */}
@@ -205,7 +207,7 @@ export default function Navbar(props) {
               aria-label="Search"
               style={{ textAlign: "center" }}
             />
-          } */} 
+          } */}
 
           <button id="cartButton">
             <AiOutlineShoppingCart />

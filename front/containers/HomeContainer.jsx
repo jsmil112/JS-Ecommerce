@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { fetchProducts } from '../store/actions/product';
-import Search from '../components/Search';
-import RandomView from '../components/RandomView';
-import { searchProducts } from '../store/actions/product';
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import { fetchProducts } from "../store/actions/product";
+import Search from "../components/Search";
+import RandomView from "../components/RandomView";
+import { searchProducts } from "../store/actions/product";
 
 export class HomeContainers extends Component {
   constructor(props) {

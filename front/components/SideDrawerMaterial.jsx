@@ -3,11 +3,8 @@ import clsx from "clsx";
 
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import {
-  AppBar,
   Drawer,
-  Toolbar,
   List,
-  CssBaseline,
   Divider,
   IconButton,
   ListItem,
@@ -17,7 +14,7 @@ import {
 
 import InboxIcon from "@material-ui/icons/MoveToInbox";
 import MailIcon from "@material-ui/icons/Mail";
-import MenuIcon from "@material-ui/icons/Menu";
+
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 
@@ -67,9 +64,9 @@ export default function SideDrawer(props) {
         duration: theme.transitions.duration.leavingScreen
       }),
       overflowX: "hidden",
-      width: theme.spacing(7) + 1,
+      width: theme.spacing(5) + 1,
       [theme.breakpoints.up("sm")]: {
-        width: theme.spacing(9) + 1
+        width: theme.spacing(7) + 1
       }
     },
     toolbar: {
@@ -89,37 +86,12 @@ export default function SideDrawer(props) {
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
 
-  const handleDrawerOpen = () => {
-    setOpen(true);
-  };
-
   const handleDrawerClose = () => {
-    setOpen(false);
+    setOpen(!open);
   };
 
   return (
     <div className={classes.root}>
-      <CssBaseline />
-      <AppBar
-        position="fixed"
-        className={clsx(classes.appBar, {
-          [classes.appBarShift]: open
-        })}
-      >
-        <Toolbar>
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            onClick={handleDrawerOpen}
-            edge="start"
-            className={clsx(classes.menuButton, {
-              [classes.hide]: open
-            })}
-          >
-            <MenuIcon />
-          </IconButton>
-        </Toolbar>
-      </AppBar>
       <Drawer
         variant="permanent"
         className={clsx(classes.drawer, {
