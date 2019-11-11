@@ -1,37 +1,57 @@
-import React from "react"
-import { Link } from "react-router-dom"
-import { CardDeck, Card } from "react-bootstrap";
+import React from "react";
 import StarRatings from "react-star-ratings";
 
-
 export default ({ selectedProduct }) => {
-    if (selectedProduct.image) {
-        let urlImg = selectedProduct.image.slice(1)    
-    return ( 
-
-            <div>
-                <Link to={"/"}>Home</Link>
-
-                <Card>
-                <Card.Img variant="top" src={`${window.location.origin}${urlImg}`} />
-                <Card.Body>
-                <Card.Title>{selectedProduct.name}</Card.Title>
-                <Card.Title>{selectedProduct.price}</Card.Title>
-                <Card.Title>{selectedProduct.description}</Card.Title>
-
-                </Card.Body>
-                <Card.Footer>
-                <small className="text-muted">
-                    <StarRatings
-                    rating={selectedProduct.rating}
-                    starDimension="11px"
-                    starSpacing="4px"
-                    />
-                </small>
-                </Card.Footer>
-                <button>Add to cart</button>
-            </Card>
+  if (selectedProduct.image) {
+    let urlImg = selectedProduct.image.slice(1);
+    return (
+      <div id="singleView" className="container">
+        <form>
+          <div className="row">
+            <div id="singleProdImg" className="col-8 card card-body">
+              <img
+                src={`${window.location.origin}${urlImg}`}
+                className="thumbnail"
+                alt="Image"
+              />
             </div>
-    )
-    } else return (<p>Loading...</p>)
-}
+            <div className="col-6">
+              <br />
+
+              <h2 className="mb-4">{selectedProduct.name}</h2>
+              <ul className="list-group">
+                <li id="singlePrice" className="list-group-item">
+                  <strong>{selectedProduct.price}</strong>
+                </li>
+                <li className="list-group-item">
+                  <strong>{selectedProduct.description}</strong>
+                </li>
+                <li className="list-group-item">
+                  <small className="text-muted">
+                    <StarRatings
+                      rating={selectedProduct.rating}
+                      starDimension="11px"
+                      starSpacing="4px"
+                      starRatedColor="rgb(188, 100, 100)"
+                    />
+                  </small>
+                </li>
+                <li className="list-group-item">
+                  <strong>Product Reviews:</strong>
+                  {"......................... "}
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="row">
+            <div className="card card-body bg-dark my-5 text-light">
+              <button type="button" className="btn btn-default text-light">
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    );
+  } else return <p>Loading...</p>;
+};

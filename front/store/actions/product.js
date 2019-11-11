@@ -35,6 +35,7 @@ export const fetchProducts = () => dispatch => {
 export const searchProducts = search => dispatch => {
   axios
     .get(`/api/product/filtered/${search}`)
-    .then(res => dispatch(getSearchProducts(res.data)))
+    .then(res => dispatch(getSearchProducts(res.data))
+    )
     .catch(err => console.log(err));
 };

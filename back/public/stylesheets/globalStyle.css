@@ -3,7 +3,33 @@ body {
   position: relative;
 }
 
+.brandLogo {
+  font-family: "Cinzel", serif;
+  color: #bc6464;
+  margin-bottom: 25px;
+  font-size: 86px;
+}
+
+.brandLogoMiniDiv {
+  margin-left: 33.5vw;
+}
+
+.brandLogoMini {
+  font-family: "Cinzel", serif;
+  color: #bc6464;
+  font-size: 27px;
+  margin-bottom: -1000px;
+}
+
 #randomViewContainer {
+  min-height: 100vh;
+  overflow: hidden;
+  display: block;
+  position: relative;
+  padding-bottom: 100px;
+}
+
+#singleView {
   min-height: 100vh;
   overflow: hidden;
   display: block;
@@ -19,13 +45,13 @@ body {
 
 .natiHolder {
   -webkit-box-sizing: content-box;
-          box-sizing: content-box;
+  box-sizing: content-box;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 33.3% 33.3% 33.3%;
-      grid-template-columns: 33.3% 33.3% 33.3%;
+  grid-template-columns: 33.3% 33.3% 33.3%;
   -ms-grid-rows: 1fr 2fr 2fr 1fr;
-      grid-template-rows: 1fr 2fr 2fr 1fr;
+  grid-template-rows: 1fr 2fr 2fr 1fr;
   row-gap: 5px;
   color: white;
   background-color: black;

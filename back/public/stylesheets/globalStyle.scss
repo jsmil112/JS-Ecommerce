@@ -3,6 +3,24 @@ body {
   position: relative;
 }
 
+.brandLogo {
+  font-family: "Cinzel", serif;
+  color: rgb(188, 100, 100);
+  margin-bottom: 25px;
+  font-size: 86px;
+}
+
+.brandLogoMiniDiv {
+  margin-left: 33.5vw;
+}
+
+.brandLogoMini {
+  font-family: "Cinzel", serif;
+  color: rgb(188, 100, 100);
+  font-size: 27px;
+  margin-bottom: -1000px;
+}
+
 #randomViewContainer {
   min-height: 100vh;
   overflow: hidden;

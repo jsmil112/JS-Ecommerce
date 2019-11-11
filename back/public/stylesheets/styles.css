@@ -9,7 +9,6 @@ button {
 #loginButton {
   margin-left: 15px;
 }
-
 .brandLogo {
   font-family: "Cinzel", serif;
   color: rgb(188, 100, 100);
@@ -17,11 +16,23 @@ button {
   font-size: 86px;
 }
 
+<<<<<<< HEAD
+.navSearch{
+  width: auto;
+  margin: 0px;
+  display: inline-block;
+=======
+.card-title {
+  padding: 2px;
+  margin: 10px;
+>>>>>>> cb8da3906640b1a8a88640066e91e7b3782534a1
+}
+
 .jumbotron {
   background-color: #e1e1e1;
   background-image: url("../images/diamondBackground.png");
   background-repeat: no-repeat;
-  background-position:center;
+  background-position: center;
   background-size: 50%;
   padding-bottom: 43px;
   padding-top: 43px;
@@ -31,14 +42,6 @@ button {
 }
 #registerButton {
   color: #a86b6b;
-}
-
-.modal-title {
-  color: #a86b6b;
-}
-
-.card-title {
-  color: #797979;
 }
 
 #cartButton {
@@ -55,17 +58,31 @@ button {
   border-color: white;
 }
 
+.modal-title {
+  color: #a86b6b;
+}
+
+.card-title {
+  color: #797979;
+}
+
 .card-img-top {
   border-radius: 0px;
+}
+
+#singleProdImg {
+  height: 50%;
+  width: 50%;
+}
+
+#loginButton {
+  margin-left: 15px;
 }
 
 #productName {
   font-weight: bold;
   justify-content: center;
 }
-/* #productPrice {
-  font-size: 50px;
-} */
 
 #prodBody {
   padding-bottom: 15px;
@@ -74,11 +91,10 @@ button {
   justify-content: center;
 }
 
-.card-title {
-  padding: 2px;
-  margin: 10px;
-}
-
 #plusBtn {
   text-align: center;
+}
+
+#singlePrice {
+  font-size: 30px;
 }

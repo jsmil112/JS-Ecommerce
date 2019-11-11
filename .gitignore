@@ -58,5 +58,5 @@ typings/
 .env
 
 #
-public/bundle
-bundle
+back/public/bundle.js
+back/public/bundle.js.map

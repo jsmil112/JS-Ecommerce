@@ -68,5 +68,5 @@ Product.bulkCreate([
     return Product.findAll();
   })
   .then(products => {
-    console.log(products); // ... in order to get the array of user objects
+     console.log(products); // ... in order to get the array of user objects
   });

@@ -1,24 +1,22 @@
-import React, { Component } from "react";
-import Navbar from "../components/Navbar";
-import { connect } from "react-redux";
-import { userRegUser } from "../store/actions/user";
-import { userLogOut } from "../store/actions/user";
-import { userLogIn } from "../store/actions/user";
+import React, { Component } from 'react';
+import Navbar from '../components/Navbar';
+import { connect } from 'react-redux';
+import { userRegUser } from '../store/actions/user';
+import { userLogOut } from '../store/actions/user';
+import { userLogIn } from '../store/actions/user';
 
 class NavbarContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      email: "",
-      password: "",
-      name: ""
+      email: '',
+      password: '',
+      name: ''
     };
     this.handleLogIn = this.handleLogIn.bind(this);
     this.handleLogOut = this.handleLogOut.bind(this);
     this.handleSubmitRegister = this.handleSubmitRegister.bind(this);
-    this.handlePasswordInput = this.handlePasswordInput.bind(this);
-    this.handleEmailInput = this.handleEmailInput.bind(this);
-    this.handleNameInput = this.handleNameInput.bind(this);
+    this.handleInput = this.handleInput.bind(this);
   }
 
   handleSubmitRegister(event) {
@@ -28,8 +26,8 @@ class NavbarContainer extends Component {
       this.state.email,
       this.state.password
     );
-    document.querySelector("#registerForm").reset();
-    document.querySelector("#registerClose").click();
+    document.querySelector('#registerForm').reset();
+    document.querySelector('#registerClose').click();
 
     // .then(() => this.props.history.push("/"));
   }
@@ -41,33 +39,26 @@ class NavbarContainer extends Component {
   }
   handleLogIn(event) {
     event.preventDefault();
-    document.querySelector("#loginClose").click();
+    document.querySelector('#loginClose').click();
     this.props.userLogIn(this.state.email, this.state.password);
 
     // .then(() => this.props.history.push("/"));
   }
-  handleEmailInput(e) {
-    this.setState({ email: e.target.value });
-  }
-  handlePasswordInput(e) {
-    this.setState({ password: e.target.value });
-  }
 
-  handleNameInput(e) {
-    this.setState({
-      name: e.target.value
-    });
+  handleInput(e) {
+    const tag = e.target.name.toLowerCase();
+    this.setState({ [tag]: e.target.value });
   }
 
   render() {
+    const { user, location } = this.props;
     return (
       <div>
         <Navbar
-          user={this.props.user}
+          location = {location}
+          user={user}
           handleLogIn={this.handleLogIn}
-          handleNameInput={this.handleNameInput}
-          handleEmailInput={this.handleEmailInput}
-          handlePasswordInput={this.handlePasswordInput}
+          handleInput={this.handleInput}
           handleLogOut={this.handleLogOut}
           handleSubmitRegister={this.handleSubmitRegister}
         />
