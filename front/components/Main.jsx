@@ -7,7 +7,7 @@ import HomeContainer from "../containers/HomeContainer";
 import { fetchUser } from "../store/actions/user";
 import SingleProductContainer from "../containers/SingleProductContainer";
 import SearchResultsContainer from "../containers/SearchResultsContainer";
-
+import SideDrawer from "../components/SideDrawer";
 class Main extends Component {
   constructor(props) {
     super(props);
@@ -21,7 +21,8 @@ class Main extends Component {
     const { isUrlHome } = this.props;
     return (
       <div id="main container-fluid">
-        <NavbarContainer location={this.props.location}/>
+        <NavbarContainer location={this.props.location} />
+        <SideDrawer />
         <Switch>
           <Route exact path="/product/:id" component={SingleProductContainer} />
           <Route
