@@ -10,7 +10,6 @@ class SingleProductContainer extends React.Component {
     }
 
     componentDidMount() {
-
         this.props.fetchProduct(this.props.match.params.id)
     }
 

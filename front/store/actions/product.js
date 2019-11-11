@@ -21,7 +21,9 @@ export const selectedProduct = product => ({
 export const fetchProduct = (id) => dispatch => {
   axios.get(`/api/product/${id}`)
   .then(res => res.data)
-  .then(product => dispatch(selectedProduct(product)))
+  .then(product => {
+    dispatch(selectedProduct(product))
+  })
 }
 
 

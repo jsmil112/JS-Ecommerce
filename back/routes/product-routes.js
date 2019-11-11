@@ -28,6 +28,15 @@ router.get("/filtered/", function(req, res) {
   });
 });
 
+//gets all products with category
+router.get("/category/:catName", function(req, res) {
+  Product.findAll({
+    where: { category: { [Op.contains]: [req.params.catName] } }
+  }).then(products => {
+    res.status(200).send(products);
+  });
+});
+
 //get 9 random products
 router.get("/random/:number", function(req, res) {
   Product.findAll().then(products => {
@@ -49,6 +58,21 @@ router.get("/random/:number", function(req, res) {
 router.get("/:productId", function(req, res, next) {
   Product.findByPk(req.params.productId).then(product => {
     res.send(product);
+  });
+});
+//get single product
+
+router.get("/:productId", function(req, res, next) {
+  Product.findByPk(req.params.productId).then(product => {
+    product.getReviews().then(reviews => {
+      let numReviews = reviews.length;
+      let sum = 0;
+      reviews.map(review => {
+        sum += review.rating;
+      });
+      product.rating = Math.round(sum / numReviews) / 2;
+      res.send(product);
+    });
   });
 });
 

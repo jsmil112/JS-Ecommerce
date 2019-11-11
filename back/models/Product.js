@@ -43,7 +43,7 @@ Product.init(
     },
     rating: {
       type: S.INTEGER,
-      defaultValue: 10 //needs to be changed for a getter or setter.
+      defaultValue: 0
     },
     active: {
       type: S.BOOLEAN,
@@ -51,9 +51,24 @@ Product.init(
         if (this.getDataValue("stock") === 0)
           this.setDataValue("active", false);
       }
+    },
+    category: {
+      type: S.ARRAY(S.STRING)
     }
   },
   { sequelize: db, modelName: "product" }
 );
+
+
+// Product.prototype.getRating = async function(){
+//   const reviews = await this.getReviews();
+//     let numReviews = reviews.length;
+//     let sum = 0;
+//     reviews.map((review)=>{
+//       sum += review.rating;
+//     })
+//       console.log("PRODUCTGETTER",Math.round((sum / numReviews)) / 2)
+//       return (Math.round((sum / numReviews)) / 2)
+//   }
 
 module.exports = Product;

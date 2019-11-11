@@ -15,8 +15,4 @@ Category.init(
   { sequelize: db, modelName: "category" }
 );
 
-Product.belongsToMany(Category, {
-  through: "Product_Category"
-});
-
 module.exports = Category;
