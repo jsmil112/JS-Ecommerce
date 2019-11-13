@@ -41,7 +41,7 @@ class Main extends Component {
           />
           <Route exact path="/" component={HomeContainer} />
         </Switch>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     );
   }

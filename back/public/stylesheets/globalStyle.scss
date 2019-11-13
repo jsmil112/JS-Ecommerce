@@ -4,7 +4,7 @@ body {
 }
 
 .brandLogo {
-  font-family: "Cinzel", serif;
+  font-family: 'Cinzel', serif;
   color: rgb(188, 100, 100);
   margin-bottom: 25px;
   font-size: 86px;
@@ -12,10 +12,14 @@ body {
 
 .brandLogoMiniDiv {
   margin-left: 33.5vw;
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .brandLogoMini {
-  font-family: "Cinzel", serif;
+  font-family: 'Cinzel', serif;
   color: rgb(188, 100, 100);
   font-size: 27px;
   margin-bottom: -1000px;
@@ -49,4 +53,95 @@ body {
   position: absolute;
   bottom: 0;
   width: 100vw;
+}
+
+#sideBarRoot {
+  // position: absolute;
+  // top: 0;
+  // left: 0;
+  // right: 0;
+  // bottom: 0;
+  // overflow: hidden;
+
+  position: fixed;
+  top: 331px;
+  left: 0px;
+  right: 84vw;
+  bottom: 0;
+  overflow: hidden;
+  background-color: black;
+  padding: 12px;
+  border-right: double rgb(188, 100, 100) 2px;
+  border-top: double rgb(188, 100, 100) 2px;
+
+  transition: all 500ms linear;
+}
+
+#sideBarRoot ul {
+  padding: 0;
+  margin: 0;
+}
+
+#sideBarRoot ul li {
+  padding: 0;
+  margin: 0;
+  color: #fff;
+  list-style: none;
+  padding: 13px 9px;
+  border-bottom: rgb(188, 100, 100) 1px solid;
+}
+
+#sideBarButton {
+  position: absolute;
+  left: 200px;
+
+  top: 20px;
+  font-size: 28px;
+  color: red;
+}
+#sideBarButton:hover {
+  cursor: pointer;
+}
+
+#sideBarMain {
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  transition: transform 0.3s ease-out;
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  will-change: transform;
+  overflow-y: auto;
+}
+
+#sideBarContent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  transition: left 0.3s ease-out, right 0.3s ease-out;
+
+  margin: 12px;
+  background-color: #fff;
+}
+#SideBarOverlay {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-out, visibility 0.3s ease-out;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+#SideBarDragHandle {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  bottom: 0;
 }

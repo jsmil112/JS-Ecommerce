@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchProducts } from '../store/actions/product';
-import Search from '../components/Search';
+import Jumbotron from '../components/Jumbotron';
 import RandomView from '../components/RandomView';
 import { searchProducts } from '../store/actions/product';
 import { fetchAndAddToCart } from '../store/actions/cart';
 import { fetchProduct } from '../store/actions/product';
+import SidebarContainer from './SidebarContainer';
 
 export class HomeContainers extends Component {
   constructor(props) {
@@ -38,11 +39,12 @@ export class HomeContainers extends Component {
   render() {
     return (
       <div>
-        <Search
+        <Jumbotron
           handleSubmit={this.handleSubmit}
           handleChange={this.handleChange}
         />
-        <RandomView handleAdd={this.handleAdd} products={this.props.products} />
+        <SidebarContainer />
+        {/* <RandomView handleAdd={this.handleAdd} products={this.props.products} /> */}
       </div>
     );
   }
