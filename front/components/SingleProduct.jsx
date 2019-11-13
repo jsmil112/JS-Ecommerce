@@ -48,7 +48,11 @@ export default ({ selectedProduct, addProduct, reviews }) => {
           </div>
           <div className="row">
             <div className="card card-body bg-dark my-5 text-light">
-              <button onClick={() => addProduct(selectedProduct)} type="button" className="btn btn-default text-light">
+              <button
+                onClick={() => addProduct(selectedProduct)}
+                type="button"
+                className="btn btn-default text-light"
+              >
                 Add to Cart
               </button>
             </div>

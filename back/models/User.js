@@ -27,7 +27,8 @@ User.init(
       type: S.STRING
     },
     userType: {
-      type: S.ENUM("user", "admin")
+      type: S.ENUM("user", "admin", "root"),
+      defaultValue: "user"
     },
     address: {
       type: S.TEXT
@@ -35,10 +36,6 @@ User.init(
   },
   { sequelize: db, modelName: "user" }
 );
-
-User.beforeUpdate(user => {
-  if (user.userType === "guest") user.userType = "user"; // setDataValue() could be good practice
-});
 
 User.prototype.hashPassword = function(password) {
   return crypto

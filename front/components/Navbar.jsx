@@ -1,6 +1,7 @@
 import React from "react";
-import { AiOutlineShoppingCart } from "react-icons/ai";
 import { Link } from "react-router-dom";
+
+import { AiOutlineShoppingCart } from "react-icons/ai";
 
 export default function Navbar(props) {
   const {
@@ -129,9 +130,7 @@ export default function Navbar(props) {
               LOGIN
             </button>
 
-            {location.pathname === "/" ? (
-              ""
-            ) : (
+            {location.pathname === "/" ? null : (
               <Link to={`/`}>
                 <label>
                   <div className="brandLogoMiniDiv">
@@ -210,9 +209,7 @@ export default function Navbar(props) {
             <Link to="/user/id">
               <span id="helloUser">Hello {user.name}</span>
             </Link>
-          ) : (
-            ""
-          )}
+          ) : null}
 
           {/* code for adding searchbar to navbar */}
 
@@ -226,10 +223,11 @@ export default function Navbar(props) {
               style={{ textAlign: "center" }}
             />
           } */}
-
-          <button id="cartButton">
-            <AiOutlineShoppingCart />
-          </button>
+          <Link to="/cart">
+            <button id="cartButton">
+              <AiOutlineShoppingCart />
+            </button>
+          </Link>
         </div>
       </div>
     </nav>

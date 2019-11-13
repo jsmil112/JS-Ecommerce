@@ -4,7 +4,7 @@ body {
 }
 
 .brandLogo {
-  font-family: 'Cinzel', serif;
+  font-family: "Cinzel", serif;
   color: #bc6464;
   margin-bottom: 25px;
   font-size: 86px;
@@ -19,7 +19,7 @@ body {
 }
 
 .brandLogoMini {
-  font-family: 'Cinzel', serif;
+  font-family: "Cinzel", serif;
   color: #bc6464;
   font-size: 27px;
   margin-bottom: -1000px;
@@ -41,13 +41,13 @@ body {
 
 .natiHolder {
   -webkit-box-sizing: content-box;
-          box-sizing: content-box;
+  box-sizing: content-box;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 33.3% 33.3% 33.3%;
-      grid-template-columns: 33.3% 33.3% 33.3%;
+  grid-template-columns: 33.3% 33.3% 33.3%;
   -ms-grid-rows: 1fr 2fr 2fr 1fr;
-      grid-template-rows: 1fr 2fr 2fr 1fr;
+  grid-template-rows: 1fr 2fr 2fr 1fr;
   row-gap: 5px;
   color: white;
   background-color: black;
@@ -56,92 +56,63 @@ body {
   width: 100vw;
 }
 
-#sideBarRoot {
-  position: fixed;
-  top: 331px;
-  left: 0px;
-  right: 84vw;
-  bottom: 0;
-  overflow: hidden;
-  background-color: black;
-  padding: 12px;
-  border-right: double #bc6464 2px;
-  border-top: double #bc6464 2px;
-  -webkit-transition: all 500ms linear;
-  transition: all 500ms linear;
+.cartItemContainer {
+  background-color: rgba(233, 232, 231, 0.65);
+  margin: 7% 0% 10% 17%;
+  max-width: 58vw;
 }
 
-#sideBarRoot ul {
-  padding: 0;
-  margin: 0;
+.singleItemInCart {
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  padding: 1rem;
+  border: 2px solid #c47464;
+  color: #000;
+  font-size: 16px;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
 }
 
-#sideBarRoot ul li {
-  padding: 0;
-  margin: 0;
-  color: #fff;
-  list-style: none;
-  padding: 13px 9px;
-  border-bottom: #bc6464 1px solid;
+.singleItemInCart div {
+  display: inline-block;
 }
 
-#sideBarButton {
-  position: absolute;
-  left: 200px;
-  top: 20px;
-  font-size: 28px;
-  color: red;
+.singleItemText {
+  margin-left: 2vw;
 }
 
-#sideBarButton:hover {
-  cursor: pointer;
+.singleItemInCart img {
+  width: 115px;
+  height: 180px;
 }
 
-#sideBarMain {
-  z-index: 2;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  transition: -webkit-transform 0.3s ease-out;
-  transition: transform 0.3s ease-out;
-  transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
-  -webkit-transition: -webkit-transform 0.3s ease-out;
-  will-change: transform;
-  overflow-y: auto;
+#cosa {
+  background-color: indigo;
 }
 
-#sideBarContent {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-  -webkit-transition: left 0.3s ease-out, right 0.3s ease-out;
-  transition: left 0.3s ease-out, right 0.3s ease-out;
-  margin: 12px;
-  background-color: #fff;
+#alterQuant {
+  padding: 6px;
+  border: 2px solid #a35963;
 }
 
-#SideBarOverlay {
-  z-index: 1;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  opacity: 0;
-  visibility: hidden;
-  -webkit-transition: opacity 0.3s ease-out, visibility 0.3s ease-out;
-  transition: opacity 0.3s ease-out, visibility 0.3s ease-out;
-  background-color: rgba(0, 0, 0, 0.3);
+#alterQuant button {
+  font-family: Andale Mono, monospace;
+  color: #a86b6b;
+  display: inline-block;
+  border: none;
+  margin: 6px;
+  border: 1px solid #c7737e;
 }
 
-#SideBarDragHandle {
-  z-index: 1;
-  position: fixed;
-  top: 0;
-  bottom: 0;
+.inblockLetter {
+  display: inline-block;
+  margin: 0 6px;
+}
+
+.removeItemButton {
+  border: 2px solid black;
+  background-color: red;
+  width: 30px;
+  height: 30px;
 }
 /*# sourceMappingURL=globalStyle.css.map */
