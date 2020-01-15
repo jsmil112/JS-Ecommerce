@@ -1,5 +1,5 @@
 # JS-Ecommerce
-An Javascript based E-Commerce web app from a mock clothing store.
+An Javascript based E-Commerce web app for a mock clothing store.
 
 ## Technologies:
 
