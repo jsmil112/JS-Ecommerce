@@ -1,7 +1,9 @@
 # JS-Ecommerce
+An Javascript based E-Commerce web app from a mock clothing store.
 
 ## Technologies:
 
+* Javascript
 * React
 * Redux
 * Node.js
@@ -12,7 +14,7 @@
 
 ## Database and Seed
  
-* Requires a Postgres database named: ecommerce. (to use other name change dbconfig.json in config folder)
+* Requires a Postgres database named "ecommerce" (to use other name change dbconfig.json in config folder)
 * Run all 3 files inside Seed folder using "node " and each filename.
 
 ## Running server
@@ -29,7 +31,7 @@
 
 ## Using App
 
-* With the server running and bundle created in a browser go to:
+* With the server running and bundle created, in a browser go to:
     
     http://localhost:8080
     
@@ -54,4 +56,4 @@ As we were very time constrained there is a lot that could be improved on:
 * Mobile and responsive design
 * Product stock
 * Recovery of forgotten passwords
-* Debugging: there are many edge case and tiny bugs that need to be ironed out.
+* Debugging: there are many edge cases and tiny bugs that need to be ironed out.
