@@ -35,7 +35,7 @@
     
 ## Notes
 
-This is the second large project of the Plataforma 5 coding bootcamp curriculum. In two weeks our group of 5 was tasked with creating a e-commerce website, which included temporary guest accounts, user accounts, secure user logins, a product cart, product checkout, admin, and a product database. This was a fun yet difficult project as we were all acclimating to the SCRUM process. Previous to this project most of my work had been done alone or in pair programming, but I found I really enjoyed the team atmosphere sharing our successes and failures together and being able to learn from the groups collective knowledge.
+This was the second large project of the Plataforma 5 coding bootcamp curriculum. In two weeks our group of 5 was tasked with creating a e-commerce website, which included temporary guest accounts, user accounts, secure user logins, a product cart, product checkout, admin, and a product database. This was a fun yet difficult because it was my first foray in real group work. Previous to this project most of my work had been done alone or in pair programming, but I found I really enjoyed the team atmosphere sharing in our successes and failures together and being able to learn from the groups' collective knowledge. Also this was my first time using the complete SCRUM method with a qualified SCRUM master, which was a rewarding experience to see the methodology put fully into practice.  
 
 ## My role and contributions
 
@@ -50,8 +50,8 @@ This is the second large project of the Plataforma 5 coding bootcamp curriculum.
 
 As we were very time constrained there is a lot that could be improved on:
 
-* Debugging: there are many edge case and tiny bugs that need to be ironed out.
 * Database restructuring: The current models and relationships of our database proved to be inefficient using too many pivot tables. Especially in regards to the product cart. 
-* Mobile Responsive
+* Mobile and responsive design
 * Product stock
-* Forgotten password
+* Recovery of forgotten passwords
+* Debugging: there are many edge case and tiny bugs that need to be ironed out.
